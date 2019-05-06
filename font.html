@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>字体</title>
+	<!-- <link rel="stylesheet" type="text/css" href="font.css"> -->
+	<style type="text/css">
+		@font-face {
+	      font-family: "question";
+	      src: url("question.ttf ");
+	    }
+	</style>
+</head>
+
+<body>
+	是的福利卡时间段法律
+</body>
+<script type="text/javascript">
+	document.fonts.ready.then((res) => {
+		// window.location.reload()
+		console.log(res)
+		if (sessionStorage.getItem('font') == 2) {
+			return
+		}
+		sessionStorage.setItem('font', 1)
+		success()
+		
+	})
+	let success = () => {
+		if (sessionStorage.getItem('font') == 1) {
+			sessionStorage.setItem('font', 2)
+			setTimeout(() => {
+				window.location.reload()
+			}, 1000)
+		}
+	}
+		// setTimeout(() => {
+		// 	window.location.reload()
+		// }, 500)
+</script>
+</html>

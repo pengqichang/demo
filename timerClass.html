@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>时间类</title>
+</head>
+<body>
+	<div id='时间'></div>
+</body>
+<script type="text/javascript">
+	class Timer {
+		constructor(id = 0,time = 10) {
+			this.id = id
+			this.time = time
+		}
+		start(flag) {
+			this.id = setInterval(() => {
+				this.time --
+			}, 1000)
+		}
+		stop() {
+			clearInterval(this.id)
+		}
+	}
+	let time = new Timer()
+	time.start()
+	setInterval(() => {
+		console.log(time.time)
+		if (time.time == 0) {
+			time.stop()
+		}
+	}, 1000)
+</script>
+</html>

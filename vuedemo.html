@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent
+}
+
+body,
+html {
+  background-color: #f7f7fa;
+  overflow: hidden;
+  font-family: question, PingFangSC-Regular, -apple-system-font, Helvetica Neue, sans-serif;
+  touch-action: none;
+  background: #ffffff;
+  padding: 0;
+  border: 0;
+  margin: 0;
+  height: 100%;
+}
+
+.btn{
+  display: inline-block;
+  box-shadow: none;
+  outline: none;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+
+p{margin: 0;}
+
+.transform1{transform: translateY(-50%);}
+.fb31{flex-basis: 31px;}
+.dif {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex
+}
+
+.jcs {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between
+}
+
+.aic {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center
+}
+
+.fdc {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column
+}
+
+.flex1 {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1
+}
+
+/* 媒体查询 */
+@media screen and (min-width:320px) {
+  html {
+    font-size: 42.66667px
+  }
+}
+
+@media screen and (min-width:375px) {
+  html {
+    font-size: 50px
+  }
+}
+
+@media screen and (min-width:414px) {
+  html {
+    font-size: 55.2px
+  }
+}
+
+@media screen and (min-width:600px) {
+  html {
+    font-size: 80px
+  }
+}
+
+@media screen and (min-width:750px) {
+  html {
+    font-size: 100px
+  }
+}
+
+/* Padding-top */
+.pt71{padding-top: .71rem;}
+.pt15{padding-top: .15rem;}
+
+/* Padding-right */
+.pr54{padding-right: .54rem;}
+.pr15{padding-right: .15rem;}
+.pr4{padding-right: .04rem;}
+
+/* Padding-botom */
+.pb86{padding-bottom: .86rem;}
+.pb15{padding-bottom: .15rem;}
+
+/* Padding-left */
+.pl54{padding-left: .54rem;}
+.pl34{padding-left: .34rem;}
+.pl4{padding-left: .04rem;}
+.pl15{padding-left: .15rem;}
+
+/* Margin-top */
+.mt236{margin-top: 2.36rem;}
+.mt154{margin-top: 1.54rem;}
+.mt295{margin-top: 2.95rem;}
+.mt124{margin-top: 1.24rem;}
+.mt98{margin-top: .98rem;}
+.mt50{margin-top: .5rem;}
+.mt30{margin-top: .3rem;}
+.mt45{margin-top: .45rem;}
+.mt-73{margin-top: -.73rem}
+.mt20{margin-top: .2rem;}
+
+/* Margin-right */
+.mr15{margin-right: .15rem;}
+
+/* Margin-bottom */
+.mb214{margin-bottom: 2.14rem;}
+.mb175{margin-bottom: 1.75rem;}
+.mb103{margin-bottom: 1.03rem;}
+.mb183{margin-bottom: 1.83rem;}
+.mb21{margin-bottom: .21rem;}
+.mb23{margin-bottom: .23rem;}
+
+/* Margin-left */
+.ml20{margin-left: .2rem;}
+.ml10{margin-left: .1rem}
+.ml17{ margin-left: .17rem;}
+.ml30{margin-left: .3rem;}
+
+/* Background-color */
+.bg-fff{background-color: #fff;}
+.bg-0fc{background-color: #0fc5a5;}
+.bg-f6f{background-color: #f6f7fb;}
+.bg-efe{background-color: #efefef;}
+
+/* Color */
+.color-333{color: #333;}
+.color-fff{color: #fff;}
+.color-1fd{color: #1fd9ce;}
+.color-0fc{color: #0fc5a5;}
+.color-ff5{color: #ff5837;}
+.color-8e8{color: #8e8e8e;}
+
+/* Font-size */
+.fz63{font-size: .63rem;}
+.fz35{font-size: .35rem;}
+.fz26{font-size: .26rem;}
+.fz24{font-size: .24rem;}
+.fz36{font-size: .36rem;}
+.fz30{font-size: .3rem;}
+.fz34{font-size: .34rem;}
+.fz0{font-size: 0;}
+
+/* Absoute */
+.right0{right: 0;}
+.top50p{top: 50%;}
+.right16{right: .16rem;}
+.left0{left: 0;}
+.top0{top: 0;}
+
+/* Width */
+.w100p {width: 100%}
+.w497{width: 4.97rem;}
+.w367{width: 3.67rem;}
+.w267{width: 2.67rem;}
+.w24{width: .24rem;}
+.w292{width: 2.92rem;}
+.w200{width: 2rem;}
+.w36{width: .36rem;}
+
+/* Height */
+.h100p {height: 100%}
+.h94{height: .94rem;}
+.h31{height: .31rem;}
+.h25{height: .25rem;}
+.h91{height: .91rem;}
+
+/* Line-height */
+.lh94{line-height: .94rem;}
+
+/* Font-family */
+.pingfang {font-family: PingFangSC-Regular, -apple-system-font, Helvetica, sans-serif}
+.pingfang-medium {font-family: PingFangSC-Medium, -apple-system-font, Helvetica, sans-serif}
+.pingfang-bold {font-family: PingFangSC-Semibold, -apple-system-font, Helvetica, sans-serif}
+
+/* Text-align */
+.text-center{text-align: center;}
+.text-right{text-align: right;}
+
+/* Position */
+.por{position: relative;}
+.poa{position: absolute;}
+.pof {position: fixed}
+
+/* Border-radius */
+.br-15{border-radius: .15rem;}
+.br-max {border-radius: 1000px;}
+
+/* Box-shadow */
+.bs-1{box-shadow: 0px 4px 35px 8px rgba(14, 71, 135, 0.19);}
+
+/* Border */
+.bor-1{border: solid 1px #0fc5a5;}
+
+/* Background */
+.bg-1{
+  background-image: url(../h5img/vip_ks_loading.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #00fff1;
+}
+.bgi-1{
+  background-image: linear-gradient(90deg, 
+		#27cbcd 0%, 
+		#1ebd92 100%), 
+	linear-gradient(
+		#ff4d3b, 
+    #ff4d3b);
+  background-color: #27cbcd;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.container::after{
+  content: "";
+  height: .24rem;
+  width: 92%;
+  background-color: #3ad0bd;
+  position: absolute;
+  top: 100%;
+  left: 4%;
+  border-bottom-left-radius: .15rem;
+  border-bottom-right-radius: .15rem;
+}
+
+.container::before{
+  position: absolute;
+  content: "";
+  height: .22rem;
+  top: 100%;
+  width: 84%;
+  left: 8%;
+  margin-top: .24rem;
+  border-bottom-left-radius: .15rem;
+  border-bottom-right-radius: .15rem;
+  background-color:rgba(255, 255, 255, .1);
+}
+
+.active:active{
+  opacity: .8;
+}
+
+.loaddiv {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  margin: auto;
+  top: 0;
+  z-index: 3;
+}
+
+.loadContent {
+  position: absolute;
+  min-width: 31vh;
+  height: 18vh;
+  white-space: nowrap;
+  font-size: 16px;
+  font-family: 'PingFang-SC-Regular question';
+  left: 50%;
+  top: 50%;
+  color: #ffffff;
+  -webkit-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+
+  display: -webkit-flex;
+
+  display: flex;
+  -webkit-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  /*transition:all 3s ease ;*/
+  /*opacity: 0;*/
+}
+
+.loadbg {
+  background-color: #000000;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  height: 100%;
+  opacity: 0.7;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.loadingdesc {
+  display: inline-block;
+  width: 35vh;
+  /*padding-left: 150px;
+        padding-right: 150px;*/
+  margin-top: 11vh;
+}
+
+.loading-ball {
+  width: 1.6vh;
+  height: 1.6vh;
+  position: absolute;
+  left: 50%;
+  margin-left: -0.8vh;
+  top: 50%;
+  margin-top: -3vh;
+  border-radius: 50%;
+}
+
+.loading-ball_green {
+  background: #3797f9;
+  -webkit-animation: cg1 1.3s ease-in-out infinite;
+}
+
+.loading-ball_purple {
+  background: #f56c55;
+  -webkit-animation: cg2 1.3s ease-in-out infinite;
+}
+
+@-webkit-keyframes cg1 {
+  0% {
+    -webkit-transform: translateX(-3vh);
+    transform: translateX(-3vh)
+  }
+
+  50% {
+    -webkit-transform: translateX(3vh);
+    transform: translateX(3vh)
+  }
+
+  100% {
+    -webkit-transform: translateX(-3vh);
+    transform: translateX(-3vh)
+  }
+}
+
+@keyframes cg1 {
+  0% {
+    -webkit-transform: translateX(-3vh);
+    transform: translateX(-3vh)
+  }
+
+  50% {
+    -webkit-transform: translateX(3vh);
+    transform: translateX(3vh)
+  }
+
+  100% {
+    -webkit-transform: translateX(-3vh);
+    transform: translateX(-3vh)
+  }
+}
+
+@-webkit-keyframes cg2 {
+  0% {
+    -webkit-transform: translateX(3vh);
+    transform: translateX(3vh)
+  }
+
+  50% {
+    -webkit-transform: translateX(-3vh);
+    transform: translateX(-3vh)
+  }
+
+  100% {
+    -webkit-transform: translateX(3vh);
+    transform: translateX(3vh)
+  }
+}
+
+@keyframes cg2 {
+  0% {
+    -webkit-transform: translateX(3vh);
+    transform: translateX(3vh)
+  }
+
+  50% {
+    -webkit-transform: translateX(-3vh);
+    transform: translateX(-3vh)
+  }
+
+  100% {
+    -webkit-transform: translateX(3vh);
+    transform: translateX(3vh)
+  }
+}
+	</style>
+</head>
+<body>
+	<div id="app">
+		<div class="pof  pb86 pt71"
+            :style="zIndex">
+            <p class="dif aic poa left0 top0 ml20 mt20"
+              v-if="showBackBtn"
+              @click.stop="skipMp(2)">
+              <img src="resource/h5img/back_icon.png"
+                class="w24" />
+              <span class="fz35 color-fff ml10 pingfang-medium">退出</span>
+            </p>
+            <div class="text-center dif aic fdc w100p h100p bg-fff br-15 bs-1 pl34 pr15 container por">
+              <!-- 开始做题页 -->
+              <template v-if="pageStatus === 0">
+                <template>
+                  <img src="resource/h5img/vip_ks_img2.png" alt=""
+                    class="w200 mt236 mb214"
+                    v-if="loadQuestionStatus === 2">
+                  <img src="resource/h5img/vip_ks_img3.png" alt=""
+                    class="w292 mt236 mb214"
+                    v-else>
+                </template>
+
+                <template v-if="loadQuestionStatus === 0">
+                  <p class="fz26 color-333 mb21">正在为您组卷，请稍后...</p>
+                  <div class="dif jcc aic w100p h31">
+                    <div class="bg-efe br-max dif aic flex1 h100p por pl4 pr4">
+                      <div class="h25 bg-1 br-max"
+                        :style="{
+                          width: simulateProgress + '%'
+                        }"></div>
+                    </div>
+                    <p class="color-1fd fz24 ml17 fb31">{{simulateProgress}}%</p>
+                  </div>
+                </template>
+
+                <template v-else-if="loadQuestionStatus === 1">
+                  <button class="color-fff fz36 br-max btn w367 h94 lh94 bg-0fc active"
+                    @click.stop="doTask">开始做题</button>
+                </template>
+
+                <template v-else>
+                  <p class="fz26 color-333 mb21">题目加载失败</p>
+                  <div class="dif jcc aic w100p h31">
+                    <div class="bg-efe br-max dif aic flex1 h100p pl4 pr4">
+                    </div>
+                    <p class="color-ff5 fz24 ml17 fb31">0%</p>
+                  </div>
+                  <button class="fz36 br-max btn w367 h94 lh94 color-0fc bor-1 mt50 active"
+                    @click.stop="loadQuestionAgain">重新加载</button>
+                </template>
+              </template>
+
+            <!-- 继续做题 -->
+            <template v-else-if="pageStatus === 1">
+              <div class="dif jcc aic w100p h91 pt15 pr15 mr15 pb15 pl15 mt295 bg-f6f br-max">
+                <div class="bg-efe br-max dif aic flex1 h100p por">
+                  <p class="text-right fz30 poa right0 top0 mt-73">共{{allQuestion}}个</p>
+                    <div class="h100p br-max bgi-1 por"
+                      :style="{
+                        width: excludeQuestionProgress + '%'
+                      }">
+                        <img src="resource/h5img/vip_right.png"
+                          class="w36 poa right0 top50p transform1 right16" />
+                      </div>
+                </div>
+              </div>
+              <p class="mt50 fz34 pingfang-medium color-333 mb183">已排除{{excluedQuestion}}个错误题型  还有{{waitExcludeQuestion}}个未排除</p>
+              <button class="color-fff fz36 br-max btn w367 h94 lh94 bg-0fc active"
+                @click.stop="loadQuestionAgain">继续排除题型</button>
+                <button class="color-fff fz36 br-max btn w367 h94 lh94 bg-0fc mt30 active"
+                @click="skipMp(2)">退出</button>
+            </template>
+
+            <!-- 订正完成 -->
+            <template v-else-if="pageStatus === 2">
+              <img src="resource/h5img/vip_img4.png"
+                class="mt98 w497" />
+                <p class="fz34 pingfang-medium">恭喜您已排除本单元全部错误题型</p>
+                <div class="mt124 fz0">
+                  <button class="fz36 br-max btn w267 h94 lh94 color-0fc bor-1 active"
+                    @click.stop="loadQuestionAgain">继续刷题</button>
+                  <button class="fz36 br-max btn w267 h94 lh94 color-fff bor-1 ml30 bg-0fc active"
+                    @click.stop="skipMp(2)">退出</button>
+                </div>
+            </template>
+
+            <!-- 提交失败 -->
+            <template v-else>
+              <img src="resource/h5img/vip_ks_img1.png"
+                class="w200 mt154 mb103" />           
+              <p class="pingfang-medium fz63 color-000">提交失败</p>
+              <p class="pingfang-medium fz30 color-8e8 mt45 mb175">可能是网络原因，提交失败</p>
+              <!-- <p class="fz26 color-333 mb23">提交失败</p> -->
+              <div class="dif jcc aic w100p h31">
+                  <div class="bg-efe br-max dif aic flex1 h100p por pl4 pr4">
+                    <div class="h25 bg-1 br-max"
+                      :style="{
+                        width: simulateProgress + '%'
+                      }"></div>
+                  </div>
+                  <p class="fz24 ml17 fb31"
+                    :class="simulateProgress === 0 ? 'color-ff5' : 'color-1fd'">{{simulateProgress}}%</p>
+                </div>
+              <button class="fz36 br-max btn w367 h94 lh94 color-fff bor-1 mt50 active bg-0fc"
+                v-if="showLoadFailBtn"
+                @click.stop="loadFailPageAgain">重新提交</button>
+            </template>
+          </div>
+        </div>
+</div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script type="text/javascript">
+	var app = new Vue({
+  el: '#app',
+  data:{
+          showBackBtn: true,
+          // 显示失败页按钮
+          showLoadFailBtn: true,
+          // 控制vue与白鹭页面间跳转
+          zIndex: 2,
+          // 模拟进度条
+          simulateProgress: 0,
+          // 排除错误进度：进度基数15% -> 在计算的结果上加上15%
+          excludeQuestionProgress: 15,
+
+          // 总错题
+          allQuestion: 13,
+          // 排出错题数
+          excluedQuestion: 3,
+          // 未排出错题数
+          waitExcludeQuestion: 10,
+          /** 
+           * 题目加载情况
+           * 0: 正在加载
+           * 1：加载成功
+           * 2: 加载失败
+           */
+          loadQuestionStatus: 0,
+          /**
+           * 各业务页面：
+           * 0: 开始页
+           * 1: 继续排除错题页
+           * 2: 排除错题完成页
+           * 3: 提交失败页
+           */
+          pageStatus: 0,
+          loadAgainTarget: -1,
+          // 接口参数
+          // booksid=182052&type=2&unitid=5122
+          type: 2,
+          booksid: 'asfw',
+          unitid: 'sdfsdf',
+          submitData: {}, //提交数据
+          submitRes:{} //提交返回数据
+        
+     }
+})
+</script>
+</html>

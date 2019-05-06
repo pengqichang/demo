@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+	setTimeout(function() {
+		window.parent.postMessage('ready','*')
+		window.addEventListener('message', function(e) {
+			console.log(e)
+		}, false)
+	}, 1000)
+</script>
+</html>

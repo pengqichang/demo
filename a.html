@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<iframe src="./b.html" frameborder="0" id='iframe' style="width:100%;height:100%"></iframe>
+</body>
+<script type="text/javascript">
+	var a = {name: 'liming', type: {ready: 1}};
+window.addEventListener('message',function(e){
+    if(e.data == 'ready'){
+        console.log('iframe is ready');
+        document.getElementById('iframe').contentWindow.postMessage(a,'*');
+    }else{
+       console.log(e)
+    }
+});
+
+</script>
+</html>
