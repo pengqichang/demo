@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="confirmSkin" currentState="submit" width="1206" height="750" xmlns:e="http://ns.egret.com/eui" states="quit,submit,noAchieve">
+    <e:Rect width="100%" height="100%" fillColor="0x000000" fillAlpha="0.5" />
+    <e:Group id="content" width="560" height="290" horizontalCenter="0" verticalCenter="0">
+        <e:Rect width="560" height="290" fillColor="0xffffff" ellipseWidth="40" ellipseHeight="40"
+                y="-0.5" />
+        <e:Rect width="555" height="2" fillColor="0xcccccc"  y="190" x="0" strokeColor="0xe5e5e5"/>
+        <e:Rect width="2" height="100" fillColor="0xcccccc"   horizontalCenter="0" bottom="0" strokeColor="0xe5e5e5"/>
+        <e:Label id="title" text="是否退出测评" size="38" fontFamily="PingFangSC-Medium" textColor="0x333333" horizontalCenter="-2.5"
+                 y="50" text.submit="是否确认提交" text.noAchieve="是否确认提交"  horizontalCenter.noAchieve="-2.5" y.noAchieve="50" y.submit="50"/>
+        <e:Label id="question" text="（还有两道题未做）" includeIn="noAchieve" textColor="0xFF9D00" horizontalCenter="0.5" y="118" size="32"
+                 fontFamily="PingFangSC-Regular" />
+        <e:Label id="no" text="取消" size="36" textColor="0x999999" fontFamily="PingFangSC-Regular" width="275"
+                 height="100" anchorOffsetX="-3.67" verticalAlign="middle" textAlign="center" x="-1.67"  anchorOffsetY="0" bottom="0"/>
+        <e:Label id="yes" text="退出" size="36" textColor="0x3d8de5" fontFamily="PingFangSC-Regular"
+                 text.submit="确定" text.noAchieve="确定" width="274" height="100" verticalAlign="middle" textAlign="center"
+                 x="279"  anchorOffsetX="0" anchorOffsetY="0" bottom="0"/>
+    </e:Group>
+</e:Skin>

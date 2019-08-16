@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<e:Skin class="nextBtnSkin" states="up,down,disabled,submit" minHeight="50" minWidth="100" xmlns:e="http://ns.egret.com/eui">
+    <e:Image width="100%" height="100%" scale9Grid="1,3,7,8" alpha.disabled="0.5"
+             source="btnnext_png"
+             source.down="btnnext_down_png"/>
+    <e:Label id="label" top="8" bottom="8" left="8" right="8"
+             size="26" text="下一题"
+             textColor="0xFFFFFF" verticalAlign="middle" textAlign="center" left.submit="8" right.submit="8" top.submit="8" bottom.submit="8" text.submit="提交"/>
+</e:Skin>

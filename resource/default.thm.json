@@ -1,0 +1,16 @@
+{
+	"skins": {},
+	"autoGenerateExmlsList": true,
+	"exmls": [
+		"resource/assets_core/eui_skins/input_kousuan.exml",
+		"resource/assets_core/eui_skins/keyActionBtn.exml",
+		"resource/assets_core/eui_skins/keyboardnext.exml",
+		"resource/assets_core/eui_skins/keyCharBtn.exml",
+		"resource/assets_core/eui_skins/KeyVertical.exml",
+		"resource/assets_core/eui_skins/vslider.exml",
+		"resource/eui_skins/confirm.exml",
+		"resource/eui_skins/nextBtn.exml",
+		"resource/eui_skins/prevBtn.exml"
+	],
+	"path": "resource/default.thm.json"
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<e:Skin class="keyCharBtnSkin" states="up,down" height="84" width="108" currentState="up" xmlns:e="http://ns.egret.com/eui">
+    <e:Image width="100%" height="100%"  source="char_up_png"/>
+    <e:Label id="labelDisplay" width="100%" height="100%" size="36" textColor="0x333333" verticalAlign="middle" textAlign="center"/>
+    <e:Image id="iconDisplay" verticalCenter="0" horizontalCenter="0" />
+    
+    <!--按下的背景,扩充元素-->
+    <e:Image includeIn="down" id="bigImageDown" width="152" height="216" y="-123" horizontalCenter="0" source="char_down_png"   anchorOffsetX="0" anchorOffsetY="0" />
+    <e:Label includeIn="down" id="labelDisplayDown" horizontalCenter="0" y="-94"  size="60" textColor="0x333333" />
+    <e:Image includeIn="down" id="iconDisplayDown" scaleX="1.6" scaleY="1.6" horizontalCenter="0" y="-80" />
+    
+</e:Skin>

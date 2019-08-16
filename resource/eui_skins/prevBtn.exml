@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<e:Skin class="backBtnSkin" states="up,down,disabled" minHeight="50" minWidth="100" xmlns:e="http://ns.egret.com/eui">
+    <e:Image percentWidth="100" percentHeight="100" alpha.disabled="1"
+             source="btnback_png"
+             source.down="btnback_down_png"/>
+    <e:Label id="labelDispla" top="8" bottom="8" left="8" right="8"
+             size="26" text="上一题"
+             textColor="0x0096ff" verticalAlign="middle" textAlign="center"/>
+</e:Skin>

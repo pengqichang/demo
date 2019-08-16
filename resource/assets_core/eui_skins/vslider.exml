@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="VSliderSkin"  minWidth="20" height="184" width="74" minHeight="8"  xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+    <e:Image id="track" source="track_png"  width="35"  height="184" verticalCenter="0" horizontalCenter="0"        />
+    <e:Group id="thumb" height="64" width="94" verticalCenter="0" horizontalCenter="0">
+        <e:Image source="thumb_png" width="64" height="100%" horizontalCenter="0"  scale9Grid="0,37,74,1"/>
+        <e:Rect width="32" height="3" verticalCenter="10" ellipseHeight="3" ellipseWidth="3" horizontalCenter="0" fillColor="0xe6e6e6 "/>
+        <e:Rect width="32" height="3" verticalCenter="0" ellipseHeight="3" ellipseWidth="3" horizontalCenter="0" fillColor="0xe6e6e6 "/>
+        <e:Rect width="32" height="3" verticalCenter="-10" ellipseHeight="3" ellipseWidth="3" horizontalCenter="0" fillColor="0xe6e6e6 "/>
+    </e:Group>
+</e:Skin>

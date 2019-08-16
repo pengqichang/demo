@@ -1,0 +1,106 @@
+<e:Skin class="Input_kousuan"  xmlns:e="http://ns.egret.com/eui" width="140" height="92" 
+    states="normal,active,int,num,den,num_no_int,den_no_int,mix_normal,frac_normal">
+    <!-- 背景 -->
+    <e:Rect percentWidth="100" percentHeight="100" strokeWeight="2" ellipseWidth="10" strokeColor="0xdddddd"
+            fillColor="0xf3f3f3" 
+            strokeColor.normal="0xdddddd" fillColor.normal="0xf3f3f3" 
+            strokeColor.active="0x36b5af" fillColor.active="0xf5fbfb"
+            strokeColor.int="0x0096ff" fillColor.int="0xd4e8f7"
+            strokeColor.num="0x0096ff" fillColor.num="0xd4e8f7"
+            strokeColor.den="0x0096ff" fillColor.den="0xd4e8f7"
+            strokeColor.den_no_int="0x0096ff" fillColor.den_no_int="0xd4e8f7"
+            strokeColor.num_no_int="0x0096ff" fillColor.num_no_int="0xd4e8f7"
+            strokeColor.mix_normal="0xdddddd" fillColor.mix_normal="0xf3f3f3"
+
+             />
+    <e:Label id="main" text="" textColor="0x000000" width="100%" height="100%" textAlign="center" verticalAlign="middle"
+             includeIn="active,normal" />
+    <!-- 整数部分 -->
+    <e:Rect width="46%" height="46%" strokeWeight="1" ellipseWidth="10" verticalCenter="0" strokeColor="0x0096ff"
+            fillColor="0xd4e8f7"  x="3.2"
+            fillColor.int="0xd4e8f7" strokeColor.int="0x0096ff"
+            fillColor.num="0xf3f3f3" strokeColor.num="0xdddddd"
+            fillColor.den="0xf3f3f3" strokeColor.den="0xdddddd"
+            strokeColor.mix_normal="0xf3f3f3" fillColor.mix_normal="0xf3f3f3"
+            excludeFrom="normal,active,num_no_int,den_no_int,frac_normal" 
+            />
+    <e:Label id="int" text="" textColor="0x000000" width="65" height="42.2" textAlign="center" verticalAlign="middle"
+             verticalCenter="0"  x="3.2" anchorOffsetX="0" anchorOffsetY="0"
+             excludeFrom="normal,active,num_no_int,den_no_int,frac_normal" 
+             />
+    <!-- 分子 -->
+    <e:Rect width="46%" height="46%" strokeWeight="1" ellipseWidth="10" verticalCenter="-23" strokeColor="0x0096ff"
+            fillColor="0xd4e8f7" x="70"
+            fillColor.int="0xf3f3f3" strokeColor.int="0xdddddd"
+            fillColor.num="0xd4e8f7" strokeColor.num="0x0096ff"
+            fillColor.den="0xf3f3f3" strokeColor.den="0xdddddd"
+            fillColor.num_no_int="0xd4e8f7" strokeColor.num_no_int="0x0096ff"
+            fillColor.den_no_int="0xf3f3f3" strokeColor.den_no_int="0xdddddd"
+            horizontalCenter.den_no_int="0"
+            horizontalCenter.num_no_int="0"
+            horizontalCenter.frac_normal="0"
+            horizontalCenter.den= "33"
+            horizontalCenter.int= "33"
+            horizontalCenter.num= "33"
+            strokeColor.mix_normal="0xf3f3f3" fillColor.mix_normal="0xf3f3f3"
+            strokeColor.frac_normal="0xf3f3f3" fillColor.frac_normal="0xf3f3f3"
+            
+            excludeFrom="normal,active" 
+            
+             />
+    <e:Label id="num" text="" textColor="0x000000" width="46%" height="46%" textAlign="center" verticalAlign="middle"
+            verticalCenter="-23"  x="70"
+            horizontalCenter.den_no_int="0"
+            horizontalCenter.num_no_int="0"
+            horizontalCenter.frac_normal="0"
+            horizontalCenter.den= "33"
+            horizontalCenter.int= "33"
+            horizontalCenter.num= "33"
+            excludeFrom="normal,active" 
+            
+             />
+
+    <!-- 分母 -->
+    <e:Rect width="46%" height="46%" strokeWeight="1" ellipseWidth="10" verticalCenter="23" strokeColor="0x0096ff"
+            fillColor="0xd4e8f7" x="70" 
+            fillColor.int="0xf3f3f3" strokeColor.int="0xdddddd"
+            fillColor.num="0xf3f3f3" strokeColor.num="0xdddddd"
+            fillColor.den="0xd4e8f7" strokeColor.den="0x0096ff"
+            fillColor.num_no_int="0xf3f3f3" strokeColor.num_no_int="0xdddddd"
+            fillColor.den_no_int="0xd4e8f7" strokeColor.den_no_int="0x0096ff"
+            horizontalCenter.den_no_int="0"
+            horizontalCenter.num_no_int="0"
+            horizontalCenter.frac_normal="0"
+            horizontalCenter.den= "33"
+            horizontalCenter.int= "33"
+            horizontalCenter.num= "33"
+            strokeColor.mix_normal="0xf3f3f3" fillColor.mix_normal="0xf3f3f3"
+            strokeColor.frac_normal="0xf3f3f3" fillColor.frac_normal="0xf3f3f3"
+            
+            excludeFrom="normal,active" 
+            
+            />
+    <e:Label id="den" text="" textColor="0x000000" width="46%" height="46%" textAlign="center" verticalAlign="middle"
+            verticalCenter="23"  x="70"
+            horizontalCenter.den_no_int="0"
+            horizontalCenter.num_no_int="0"
+            horizontalCenter.frac_normal="0"
+            horizontalCenter.den= "33"
+            horizontalCenter.int= "33"
+            horizontalCenter.num= "33"
+            excludeFrom="normal,active" 
+            
+            />
+
+    <!--分数线-->
+    <e:Rect width="50%" height="2" verticalCenter="0" x="67.8"
+        horizontalCenter.den_no_int="0"
+        horizontalCenter.num_no_int="0"
+        horizontalCenter.frac_normal="0"
+        horizontalCenter.den= "33"
+        horizontalCenter.int= "33"
+        horizontalCenter.num= "33"
+    excludeFrom="normal,active" 
+    
+    />
+</e:Skin>

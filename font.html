@@ -8,33 +8,34 @@
 	      font-family: "question";
 	      src: url("question.ttf ");
 	    }
+	    @font-face {
+	      font-family: "HYZhengYuan";
+	      src: url("HYZhengYuan.ttf ");
+	    }
 	</style>
 </head>
 
 <body>
-	是的福利卡时间段法律
+	<div style="font-family: question"> 答复mmmmmmm</div>
+	<div style="font-family: HYZhengYuan"> 答复mmmmmmm</div>
 </body>
 <script type="text/javascript">
-	document.fonts.ready.then((res) => {
-		// window.location.reload()
-		console.log(res)
-		if (sessionStorage.getItem('font') == 2) {
-			return
-		}
-		sessionStorage.setItem('font', 1)
-		success()
-		
-	})
-	let success = () => {
-		if (sessionStorage.getItem('font') == 1) {
-			sessionStorage.setItem('font', 2)
-			setTimeout(() => {
-				window.location.reload()
-			}, 1000)
-		}
+	let str = '21124'
+	let search = '24'
+	function getIndex(str, point) {
+		let arr = str.split('')
+		let arr1 = point.split('')
+		let i
+		arr.some((item,index) => {
+			if (arr1.length == 1) {
+				i = item === arr1[0] ? index : -1
+				return item === arr1[0]
+			} else {
+				i = arr1.every((x,ii) => {x == arr[index + ii]}) ? index : -1
+				return arr1.every((x,ii) => {x == arr[index + ii]})
+			}
+		})
+		return i
 	}
-		// setTimeout(() => {
-		// 	window.location.reload()
-		// }, 500)
 </script>
 </html>

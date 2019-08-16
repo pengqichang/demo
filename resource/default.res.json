@@ -1,0 +1,26 @@
+{
+	"groups": [
+		{
+			"keys": "preload_0_json,audio_json,audio_png",
+			"name": "preload"
+		}
+	],
+	"resources": [
+		{
+			"url": "TextureMerger/preload_0.json",
+			"type": "sheet",
+			"name": "preload_0_json",
+			"subkeys": "A1_active_png,A1_normal_png,A2_active_png,A2_normal_png,a1_e_png,a1_r_png,a2_e_png,a2_r_png,action_up_png,addInput_png,audio2_png,btnback_down_png,btnback_png,btnnext_down_png,btnnext_png,char_down_2_png,char_down_png,char_up_png,d1_a_png,d1_d_png,d1_e_png,d1_r_png,e_dismover_png,face_png,kc12_0_png,kc12_1_png,kc13_0_png,kc13_1_png,kc13_2_png,kc1_png,kc2_png,kc3_png,kc4_png,kc5_png,kc6_png,kc7_png,kc8_png,kc9_png,key_delete_png,lowerCase_png,medal_chucai_png,next_down_png,next_png,numBtn@2x_png,openFrac_png,openMixed_png,pi_png,switchPanel_png,upperCase_png,xuanxiang8_png,xuanxiang_png"
+		},
+		{
+			"url": "TextureMerger/audio.json",
+			"type": "json",
+			"name": "audio_json"
+		},
+		{
+			"url": "TextureMerger/audio.png",
+			"type": "image",
+			"name": "audio_png"
+		}
+	]
+}
