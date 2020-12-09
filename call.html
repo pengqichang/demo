@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+Function.prototype.call = function(content) {
+	console.log(content, this)
+	content = content ? Object(content) : window
+	content.fn = this
+	let args = []
+	for(let i = 1;i < arguments.length; i++) {
+		args.push('argumengts['+i+']')
+	}
+	let r = eval('content.fn('+args+')')
+	delete content.fn
+	return r
+}
+function fn1() {
+	console.log('fn1',this)
+}
+function fn2() {
+	console.log('fn2',this)
+}
+fn1.call.call.call(fn2)
+</script>
+</html>

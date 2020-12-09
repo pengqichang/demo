@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+	function Anmail (type) function{
+		this.type = type
+	}
+	Anmail.prototype.say = function() {
+		console.log(this.type)
+	}
+	// 模拟 new
+	function mokeClass() {
+		let c = [].shift.call(arguments)
+		let obj = {};
+		obj.__proto__ = c.prototype
+		let r = c.apply(obj, arguments)
+		return r instanceof Object ? r : obj
+	}
+</script>
+</html>

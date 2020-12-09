@@ -2,40 +2,44 @@
 <html>
 <head>
 	<title>字体</title>
+	<link rel="stylesheet" type="text/css" href="">
 	<!-- <link rel="stylesheet" type="text/css" href="font.css"> -->
 	<style type="text/css">
 		@font-face {
 	      font-family: "question";
 	      src: url("question.ttf ");
 	    }
-	    @font-face {
+	    /*@font-face {
 	      font-family: "HYZhengYuan";
 	      src: url("HYZhengYuan.ttf ");
-	    }
+	    }*/
 	</style>
+	<!-- <script type="text/javascript" src="fontfaceobserver.standalone.js"></script> -->
 </head>
-
 <body>
-	<div style="font-family: question"> 答复mmmmmmm</div>
-	<div style="font-family: HYZhengYuan"> 答复mmmmmmm</div>
+	<div style="font-family: question">12345678</div>
+	<div id='state'></div>
+	<!-- <div style="font-family: HYZhengYuan"> 答复mmmmmmm</div> -->
 </body>
-<script type="text/javascript">
-	let str = '21124'
-	let search = '24'
-	function getIndex(str, point) {
-		let arr = str.split('')
-		let arr1 = point.split('')
-		let i
-		arr.some((item,index) => {
-			if (arr1.length == 1) {
-				i = item === arr1[0] ? index : -1
-				return item === arr1[0]
-			} else {
-				i = arr1.every((x,ii) => {x == arr[index + ii]}) ? index : -1
-				return arr1.every((x,ii) => {x == arr[index + ii]})
-			}
-		})
-		return i
+<script type="text/javascript" defer>
+	// var font = new FontFaceObserver('question');
+	// font.load().then(() => {
+	// 	console.log('字体加载完毕')
+	// })
+	window.onload = function() {
+		var dom = document.getElementById('state')
+		if (document.fonts.check){
+			dom.innerHTML = 'true'
+		} else {
+			dom.innerHTML = 'false'
+		}
+		// dom.innerHTML = 'sdfasdfasdf'
 	}
+
+	// dom.innerHTML = document.fonts.check
+	// document.fonts.ready.then(() => {
+	// 	console.log('加载字体')
+	// }) 
 </script>
+
 </html>

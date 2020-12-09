@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/reset.min.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+  <!-- <link rel="stylesheet" href="css/index.css"> -->
+  <script src="js/vue.js"></script>
+  <script src="js/index.js"></script>
+  <style>
+    body{
+      background: rgba(239,244,253,1);
+    }
+    header{
+      height: 40px;
+      width: 100%;
+      padding: 0 80px;
+      background: #000;
+      color: #fff;
+      line-height: 40px;
+      display: flex;
+      box-sizing: border-box;
+      justify-content: space-between;
+    }
+    .title{
+      height: 100px;
+      width: 100%;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 80px;
+    }
+    .name{
+      font-size:20px;
+      font-family:PingFang SC;
+      font-weight:bold;
+      color:rgba(18,18,18,1);
+    }
+    .export_excel{
+      width:94px;
+      height:40px;
+      background:rgba(70,126,255,1);
+      border-radius:8px;
+      font-size:16px;
+      line-height: 40px;
+      text-align: center;
+      color:rgba(255,255,255,1);
+    }
+
+    .content{
+      box-sizing: border-box;
+      width: 100%;
+      padding: 0 40px;
+    }
+    .search{
+      box-sizing: border-box;
+      width: 100%;
+      padding: 40px;
+      background: #fff;
+      border-radius:30px;
+      display: flex;
+      align-items: center;
+    }
+    .search_item{
+      flex: 1;
+    }
+    .el-select{
+      width:311px;
+      height:40px;
+    }
+    .el-input > input{
+      border:2px solid rgba(220,228,243,1);
+      border-radius:8px;
+    }
+  </style>
+  <title>教案管理</title>
+</head>
+<body>
+  <div id="app">
+    <header>
+      <div>狸米直播课权限后台</div>
+      <div>教案管理</div>
+      <div>  </div>
+    </header>
+    <div class="title">
+      <div class="name">陈璐老师的直播课互动效果</div>
+      <div class="export_excel">导出excel</div>
+    </div>
+    <div class="content">
+      <div class="search">
+        <div class="search_item">
+          <div >
+            <div>课程类型</div>
+            <el-select v-model="value" placeholder="请选择">
+              <el-option
+                v-for="item in options"
+                :key="item.value"
+                :label="item.label"
+                :value="item.value">
+              </el-option>
+            </el-select>
+          </div>
+          <div>
+            <div>年份</div>
+            <el-select v-model="value" placeholder="请选择">
+              <el-option
+                v-for="item in options"
+                :key="item.value"
+                :label="item.label"
+                :value="item.value">
+              </el-option>
+            </el-select>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+  new Vue({
+    el: '#app',
+    data: function() {
+      return {
+        options: [{
+          value: '选项1',
+          label: '黄金糕'
+        }, {
+          value: '选项2',
+          label: '双皮奶'
+        }, {
+          value: '选项3',
+          label: '蚵仔煎'
+        }, {
+          value: '选项4',
+          label: '龙须面'
+        }, {
+          value: '选项5',
+          label: '北京烤鸭'
+        }],
+        value: ''
+      }
+    }
+  })
+</script>
+</html>
