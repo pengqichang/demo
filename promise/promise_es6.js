@@ -1,6 +1,3 @@
-// const Promise = require("./promise_es5");
-
-// const Promise = require("./promise_es5");
 
 class Promise {
   constructor(executor) {
@@ -18,12 +15,13 @@ class Promise {
       this.reject(e)
     }
   }
-  resolve(data) {
+  resolve (data) {
     // console.log(this)
     if (this.status === 'padding') {
       this.status = 'resolved'
       this.value = data
       this.onResolevdCallbacks.forEach(fn => fn())
+      // console.log(this.onResolevdCallbacks)
     }
   }
   reject(err){
@@ -80,39 +78,74 @@ class Promise {
     })
     return promise2
   }
+  static all (arg) {
+    let arr = []
+    let index = 0
+    function resolvePromise(fn, i) {
+      return new Promise((r,j) => {
+        try{
+          if (fn instanceof Promise) 
+          fn.then(res => {
+            r(res)
+          },j)
+          else r(fn)
+        }catch(e) {
+          j(e)
+        }
+      })
+    }
+    return new Promise((resolve, reject) => {
+      arg.forEach((fn,i) => {
+        resolvePromise(fn,i).then(r => {
+          arr[i] = r
+          index++
+          if (index === arg.length) resolve(arr)
+        }, reject)
+      })
+    })
+  }
+  static race (arg){
+    return new Promise((resolve, reject) => {
+      arg.forEach(fn => {
+        fn.then(resolve, reject)
+      })
+    })
+  }
+  static resolve(res) {
+    return new Promise((resolve, reject) => resolve(res))
+  }
+  static reject(res) {
+    return new Promise((resolve, reject) => reject(res))
+  }
+  finally(cb) {
+    return this.then(res => {
+      return Promise.resolve(cb()).then(() => res)
+    }, err => {
+     return	Promise.reject(cb()).then(() => {throw err})
+    })
+  }
+  static defer() {
+    let dfd = {};
+    dfd.promise = new Promise((resolve, reject) => {
+      dfd.resolve = resolve;
+      dfd.reject = reject;
+    })
+    return dfd
+  }
+  static deferred = this.defer
 }
 const resolvePromise = (promise2, x, resolve, reject) => {
   if (x === promise2) reject(new TypeError('循环引用'))
-  let called  
-  if (x !==null && (typeof x === 'function' || typeof x === 'object')) {
+  if (x instanceof Promise) {
     try{
-      let then = x.then
-      if (typeof then === 'function') {
-        then.call(x, r => {
-          if (!called) called = true
-					else return 
-					resolvePromise(promise2, r, resolve, reject)
-        }, y => {
-          if (!called) called = true
-					else return 
-					reject(y)
-        })
-      } else {
-        if (!called) called = true
-        else return 
-        resolve(x)
-      }
+      x.then(resolve, reject)
     }catch(e) {
       reject(e)
     }
+  } else {
+    resolve(x)
   }
 }
 
-let p = new Promise((resolve,reject) => {
-  resolve(111)
-}).then(res => {
-  console.log(res)
-  return 222
-}).then(res => {
-  console.log(res)
-})
+
+module.exports = Promise;
